@@ -1,0 +1,37 @@
+export default [
+  'strapi::logger',
+  'strapi::errors',
+  'strapi::security',
+  {
+    name: 'strapi::cors',
+    config: {
+      origin: [
+        'http://localhost:8080',
+        'http://localhost:5173', 
+        'http://localhost:3000',
+        'http://localhost:4173',
+        'https://sleftpayments.com',
+        'https://www.sleftpayments.com',
+        'https://sleftpayments.vercel.app',
+        /\.onrender\.com$/,
+      ],
+      methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS', 'HEAD', 'PATCH'],
+      headers: [
+        'Content-Type',
+        'Authorization',
+        'Origin',
+        'Accept',
+        'X-Requested-With',
+        'Cache-Control',
+      ],
+      keepHeaderOnError: true,
+      credentials: true,
+    },
+  },
+  'strapi::poweredBy',
+  'strapi::query',
+  'strapi::body',
+  'strapi::session',
+  'strapi::favicon',
+  'strapi::public',
+];
