@@ -50,15 +50,5 @@ export default {
         middlewares: [],
       },
     },
-    // Count blog posts
-    {
-      method: 'GET',
-      path: '/blog-posts/count',
-      handler: 'blog-post.count',
-      config: {
-        policies: [],
-        middlewares: [],
-      },
-    },
   ],
 };

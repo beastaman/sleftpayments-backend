@@ -1,5 +1,5 @@
 /**
- *  blog-post controller
+ * blog-post controller
  */
 
 import { factories } from '@strapi/strapi';
